@@ -1,0 +1,55 @@
+curl [DIRECCION]    --> muestra el codigo de la pagina
+curl -v [DIRECCION] --> muestra el encabezado de la pagina
+
+http -> intercambio de archivos
+rest -> intercambio de recursos
+
+api restful -> api que esta diseñada alredor de los conceptos de rest
+
+CONCEPTOS REST
+> recurso  --> puede ser cualquier cola 
+> URI      --> identificar recurso
+> accion   --> peticion
+
+Reticion REST
+URL        --> URI + DOMINIO + PROTOCOLO ect
+Verbo HTTP --> {GET,POST,PUT,DELETE}
+
+Ejemplos REST
+GET /books/1
+DELETE /books/50
+
+Usos
+Interacciones Simples
+Recursos limitados
+
+
+Consumio via REST
+- realizar peticiones HTTP
+- interpretar respuesta HTTP
+
+###################################################
+ACCESO A JSON
+---------------------------------------------------
+curl
+
+curl -v [URL] 2> /dev/null | jq
+---------------------------------------------------
+php
+
+<?php
+    echo file_get_contents('[URL]').PHP_EOL;
+---------------------------------------------------
+
+file_get_contents('[URL]').PHP_EOL --> return JSON
+
+file_get_contents('[URL]')         --> return JSON
+VARIABLE = json_decode(JSON)       --> desencriptar JSON
+VARIABLE['ATRIBUTO_JSON'].PHP_EOL  --> obtener solo el campo indicado
+
+###################################################
+
+
+
+###################################################
+
