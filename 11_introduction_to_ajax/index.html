@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <table id="bookTable" class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author_id</th>
+                <th>Genre_id</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <input type="button" value="load books" id="loadBooks"/>
+        <div style="display: none;" id="messages">
+            <p></p>
+        </div>
+        <div style="display: none;" id="bookForm">
+            <hr/>
+            <table>
+                <tr>
+                    <td>Title</td>
+                    <td><input type="text" name="bookTitle" id="bookTitle"/></td>
+                </tr>
+                <tr>
+                    <td>Author id</td>
+                    <td><input type="text" name="bookAuthorId" id="bookAuthorId"/></td>
+                </tr>
+                <tr>
+                    <td>Genre id</td>
+                    <td><input type="text" name="bookGenreId" id="bookGenreId"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"> <input type="button" value="Save" id="bookSave"/> </td>
+                </tr>
+            </table>
+        </div>
+
+    </table>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
+</body>
+</html>
