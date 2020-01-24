@@ -1,0 +1,23 @@
+commit bd5bcd07d92a3514774eaee5e34c69ed61ed73e6
+Author: r.martinez1 <r.martinez@empresasim.com>
+Date:   Thu Jan 23 17:57:39 2020 -0400
+
+    introduccion to ajax
+
+commit 7e3b17f0a57712dc2616c4940cff1e8f81306fc8
+Author: r.martinez1 <r.martinez@empresasim.com>
+Date:   Thu Jan 23 17:17:30 2020 -0400
+
+    error management
+
+commit 3ab0c168374acc4ada0551a101a223cb482e2666
+Author: r.martinez1 <r.martinez@empresasim.com>
+Date:   Thu Jan 23 16:03:49 2020 -0400
+
+    Auth with token
+
+commit 561424441bf0c8fab864c6b89250c07708d1a505
+Author: r.martinez1 <r.martinez@empresasim.com>
+Date:   Wed Jan 22 22:27:40 2020 -0400
+
+    PHP restful api

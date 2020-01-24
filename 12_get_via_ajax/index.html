@@ -1,0 +1,74 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <table id="booksTable" class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author_id</th>
+                <th>Genre_id</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <input type="button" value="load books" id="loadBooks"/>
+        <div style="display: none;" id="messages">
+            <p></p>
+        </div>
+        <div style="display: none;" id="bookForm">
+            <hr/>
+            <table>
+                <tr>
+                    <td>Title</td>
+                    <td><input type="text" name="bookTitle" id="bookTitle"/></td>
+                </tr>
+                <tr>
+                    <td>Author id</td>
+                    <td><input type="text" name="bookAuthorId" id="bookAuthorId"/></td>
+                </tr>
+                <tr>
+                    <td>Genre id</td>
+                    <td><input type="text" name="bookGenreId" id="bookGenreId"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"> <input type="button" value="Save" id="bookSave"/> </td>
+                </tr>
+            </table>
+        </div>
+
+    </table>
+    
+</body>
+<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	    crossorigin="anonymous">
+</script>
+    <script type="text/javascript">
+        $('#loadBooks').click(function(){
+            $('#messages').first('p').text('Loading books');
+            $('#messages').show();
+
+            $.ajax({
+            method: 'GET',
+            url:'http://localhost:8000/books',
+            success:function(data){
+                console.log(data);
+                $('#messages').show();
+                $('#booksTable > tbody').empty();
+                for ( b in data){
+                    addBook(data[b]);
+                }
+                $('#bookForm').show();
+            }
+        });
+        });
+
+        function addBook(book){
+            $('#booksTable tr:last').after('<tr><td>' + book.title + '</td><td>' + book.author_id + '</td><td>' + book.genre_id + '</td></tr>')   
+        }
+    </script>
+</html>
